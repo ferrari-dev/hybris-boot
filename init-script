@@ -217,9 +217,9 @@ run_debug_session() {
 
     USB_IFACE=notfound
     /sbin/ifconfig rndis0 $LOCAL_IP && USB_IFACE=rndis0
-    if [ x$USB_IFACE = xnotfound ]; then
-        /sbin/ifconfig usb0 $LOCAL_IP && USB_IFACE=usb0
-    fi
+    # if [ x$USB_IFACE = xnotfound ]; then
+    #     /sbin/ifconfig usb0 $LOCAL_IP && USB_IFACE=usb0
+    # fi
     # Report for the logs
     /sbin/ifconfig -a
 
